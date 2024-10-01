@@ -4,7 +4,9 @@ const roadmapData = [
         content: [
             {
                 text: "Basic networking concepts",
-                sources: [],
+                sources: [
+                    "https://www.youtube.com/watch?v=qiQR5rTSshw"
+                ],
                 subitems: [
                     {
                         text: "OSI model",
@@ -20,7 +22,12 @@ const roadmapData = [
                         ]
                     },
                     "IP addressing and subnetting",
-                    "DNS (Domain Name System)",
+                    {
+                        text: "Domain Name System (DNS)",
+                        sources: [
+                            "https://www.youtube.com/watch?v=NiQTs9DbtW4"                        
+                        ]
+                    },
                     "Network topologies",
                     "LAN, WAN, and MAN"
                 ]
