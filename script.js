@@ -9,9 +9,8 @@ const roadmapData = [
                     {
                         text: "OSI model",
                         sources: [
-                            "https://www.networkworld.com/article/3239677/the-osi-model-explained-and-how-to-easily-remember-its-7-layers.html",
-                            "https://www.imperva.com/learn/application-security/osi-model/",
-                            "https://www.geeksforgeeks.org/layers-of-osi-model/"                            
+                            "https://www.youtube.com/watch?v=0y6FtKsg6J4",
+                            "https://www.networkworld.com/article/3239677/the-osi-model-explained-and-how-to-easily-remember-its-7-layers.html",                           
                         ]
                     },
                     "TCP/IP protocol suite",
