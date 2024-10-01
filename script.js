@@ -3,12 +3,24 @@ const roadmapData = [
         title: "1. Fundamentals",
         content: [
             {
-                text: "Learn basic networking concepts",
-                sources: [
-                    "https://www.cisco.com/c/en/us/solutions/small-business/resource-center/networking/networking-basics.html",
-                    "https://www.geeksforgeeks.org/basics-computer-networking/"
+                text: "Basic networking concepts",
+                sources: [],
+                subitems: [
+                    {
+                        text: "OSI model",
+                        sources: [
+                            "https://www.networkworld.com/article/3239677/the-osi-model-explained-and-how-to-easily-remember-its-7-layers.html",
+                            "https://www.imperva.com/learn/application-security/osi-model/",
+                            "https://www.geeksforgeeks.org/layers-of-osi-model/"                            
+                        ]
+                    },
+                    "TCP/IP protocol suite",
+                    "IP addressing and subnetting",
+                    "DNS (Domain Name System)",
+                    "Network topologies",
+                    "LAN, WAN, and MAN"
                 ]
-            },
+            },    
             "Understand operating systems (Windows, Linux)",
             "Learn programming basics (Python, JavaScript)",
             "Familiarize yourself with cybersecurity principles"
@@ -57,6 +69,39 @@ const roadmapData = [
 
 function createRoadmap() {
     const roadmapElement = document.getElementById('roadmap');
+    
+    function createSubitems(subitems) {
+        const subitemsList = document.createElement('ul');
+        subitemsList.className = 'subitems';
+        subitems.forEach(subitem => {
+            const subitemListItem = document.createElement('li');
+            if (typeof subitem === 'object' && subitem.text) {
+                const textSpan = document.createElement('span');
+                textSpan.textContent = subitem.text;
+                subitemListItem.appendChild(textSpan);
+                
+                if (subitem.sources && subitem.sources.length > 0) {
+                    const sourcesList = document.createElement('ul');
+                    sourcesList.className = 'sources';
+                    subitem.sources.forEach(source => {
+                        const sourceItem = document.createElement('li');
+                        const sourceLink = document.createElement('a');
+                        sourceLink.href = source;
+                        sourceLink.textContent = source;
+                        sourceLink.target = '_blank';
+                        sourceItem.appendChild(sourceLink);
+                        sourcesList.appendChild(sourceItem);
+                    });
+                    subitemListItem.appendChild(sourcesList);
+                }
+            } else {
+                subitemListItem.textContent = subitem;
+            }
+            subitemsList.appendChild(subitemListItem);
+        });
+        return subitemsList;
+    }
+
     roadmapData.forEach((item, index) => {
         const itemElement = document.createElement('div');
         itemElement.className = 'roadmap-item';
@@ -71,23 +116,29 @@ function createRoadmap() {
         const contentList = document.createElement('ul');
         item.content.forEach(subItem => {
             const listItem = document.createElement('li');
-            if (typeof subItem === 'object' && subItem.sources) {
+            if (typeof subItem === 'object' && subItem.text) {
                 const textSpan = document.createElement('span');
                 textSpan.textContent = subItem.text;
                 listItem.appendChild(textSpan);
                 
-                const sourcesList = document.createElement('ul');
-                sourcesList.className = 'sources';
-                subItem.sources.forEach(source => {
-                    const sourceItem = document.createElement('li');
-                    const sourceLink = document.createElement('a');
-                    sourceLink.href = source;
-                    sourceLink.textContent = source;
-                    sourceLink.target = '_blank';
-                    sourceItem.appendChild(sourceLink);
-                    sourcesList.appendChild(sourceItem);
-                });
-                listItem.appendChild(sourcesList);
+                if (subItem.sources && subItem.sources.length > 0) {
+                    const sourcesList = document.createElement('ul');
+                    sourcesList.className = 'sources';
+                    subItem.sources.forEach(source => {
+                        const sourceItem = document.createElement('li');
+                        const sourceLink = document.createElement('a');
+                        sourceLink.href = source;
+                        sourceLink.textContent = source;
+                        sourceLink.target = '_blank';
+                        sourceItem.appendChild(sourceLink);
+                        sourcesList.appendChild(sourceItem);
+                    });
+                    listItem.appendChild(sourcesList);
+                }
+                
+                if (subItem.subitems) {
+                    listItem.appendChild(createSubitems(subItem.subitems));
+                }
             } else {
                 listItem.textContent = subItem;
             }
