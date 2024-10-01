@@ -13,7 +13,12 @@ const roadmapData = [
                             "https://www.networkworld.com/article/3239677/the-osi-model-explained-and-how-to-easily-remember-its-7-layers.html",                           
                         ]
                     },
-                    "TCP/IP protocol suite",
+                    {
+                        text: "TCP vs UDP",
+                        sources: [
+                            "https://www.youtube.com/watch?v=jE_FcgpQ7Co"                        
+                        ]
+                    },
                     "IP addressing and subnetting",
                     "DNS (Domain Name System)",
                     "Network topologies",
