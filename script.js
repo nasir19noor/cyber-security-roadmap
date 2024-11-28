@@ -48,10 +48,10 @@ const roadmapData = [
                 ]
             },   
             {
-                text: "Understand operating systems (Windows, Linux)",,
-                // sources: [
-                //     "https://www.youtube.com/watch?v=qiQR5rTSshw"
-                ],
+                text: "Understand operating systems (Windows, Linux)",
+                // // sources: [
+                // //     "https://www.youtube.com/watch?v=qiQR5rTSshw"
+                // ],
                 subitems: [
                     {
                         text: "Introduction to Linux",
