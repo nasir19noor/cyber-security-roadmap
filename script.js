@@ -56,9 +56,16 @@ const roadmapData = [
                     {
                         text: "Introduction to Linux",
                         sources: [
-                            "https://www.youtube.com/watch?v=sWbUDq4S6Y8"
+                            "https://www.youtube.com/watch?v=sWbUDq4S6Y8",
+                            "https://www.youtube.com/watch?v=6WatcfENsOU"
                         ]
-                    },                                
+                    },     
+                    {
+                        text: "Windows Operating System",
+                        sources: [
+                            "https://www.youtube.com/watch?v=lrtYDS5WKR0&list=PLYogJ_kxL1wTesq-vNxEc8tjDOHvszeWf"
+                        ]
+                    },                                                
                 ]
             },    
             "Learn programming basics (Python, JavaScript)",
