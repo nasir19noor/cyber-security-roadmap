@@ -33,8 +33,18 @@ const roadmapData = [
                             "https://www.youtube.com/watch?v=NiQTs9DbtW4"                        
                         ]
                     },
-                    "Network topologies",
-                    "LAN, WAN, and MAN"
+                    {
+                        text: "Network topologies",
+                        sources: [
+                            "https://www.youtube.com/watch?v=-9KbFgesTl8"                        
+                        ]
+                    },
+                    {
+                        text: "LAN, WAN, and MAN",
+                        sources: [
+                            "https://www.youtube.com/watch?v=3zJ_ohCjFOs"                        
+                        ]
+                    },                                        
                 ]
             },    
             "Understand operating systems (Windows, Linux)",
