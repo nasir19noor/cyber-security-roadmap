@@ -46,8 +46,21 @@ const roadmapData = [
                         ]
                     },                                        
                 ]
+            },   
+            {
+                text: "Understand operating systems (Windows, Linux)",,
+                // sources: [
+                //     "https://www.youtube.com/watch?v=qiQR5rTSshw"
+                ],
+                subitems: [
+                    {
+                        text: "Introduction to Linux",
+                        sources: [
+                            "https://www.youtube.com/watch?v=sWbUDq4S6Y8"
+                        ]
+                    },                                
+                ]
             },    
-            "Understand operating systems (Windows, Linux)",
             "Learn programming basics (Python, JavaScript)",
             "Familiarize yourself with cybersecurity principles"
         ]
