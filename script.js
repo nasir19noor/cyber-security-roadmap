@@ -21,7 +21,12 @@ const roadmapData = [
                             "https://www.youtube.com/watch?v=jE_FcgpQ7Co"                        
                         ]
                     },
-                    "IP addressing and subnetting",
+                    {
+                        text: "IP addressing and subnetting",
+                        sources: [
+                            "https://www.youtube.com/watch?v=Pb6R1QCGMPY",                        
+                        ]
+                    },
                     {
                         text: "Domain Name System (DNS)",
                         sources: [
